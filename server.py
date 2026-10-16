@@ -10,8 +10,14 @@ def sent_analyzer():
     text_to_analyze = request.args.get("textToAnalyze")
     # Pass the text to the emotion_detector function and store the response
     response = emotion_detector(text_to_analyze)
-    # Extract the label and score from the response
-    return response
+    # Extract the result from the response
+    dominant_emotion = response["dominant_emotion"]
+    # Check if the dominant_emotion is None, indicating an error or invalid input
+    if dominant_emotion is None:
+        return " Invalid text! Please try again!"
+    else:
+        # Return a formatted output with the dominant emotion
+        return response
 
 
 @app.route("/")
