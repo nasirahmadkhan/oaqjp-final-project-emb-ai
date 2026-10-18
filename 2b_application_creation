@@ -1,2 +1,15 @@
->>> emotion_detector("I love this new technology")
-'{"emotionPredictions":[{"emotion":{"anger":0.0132405795, "disgust":0.0020517302, "fear":0.009090992, "joy":0.9699522, "sadness":0.054984167}, "target":"", "emotionMentions":[{"span":{"begin":0, "end":26, "text":"I love this new technology"}, "emotion":{"anger":0.0132405795, "disgust":0.0020517302, "fear":0.009090992, "joy":0.9699522, "sadness":0.054984167}}]}], "producerId":{"name":"Ensemble Aggregated Emotion Workflow", "version":"0.0.1"}}'
+theia@theiadocker-nasirahmadkh:/home/project/final_project$ python3.11
+Python 3.11.15 (main, Mar  3 2026, 09:26:23) [GCC 11.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from EmotionDetection.emotion_detection import emotion_detector
+>>> print(emotion_detector('I am really mad about this'))
+{'anger': 0.6674731, 'disgust': 0.022848725, 'fear': 0.09749009, 'joy': 0.011863918, 'sadness': 0.1953058, 'dominant_emotion': 'anger'}
+>>> exit()
+theia@theiadocker-nasirahmadkh:/home/project/final_project$ python3.11 
+test_emotion_detection.py
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.560s
+
+OK
+theia@theiadocker-nasirahmadkh:/home/project/final_project$ 
